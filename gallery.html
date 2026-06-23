@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button class="sidebar-toggle" id="sidebar-toggle">☰</button>
+
+    <div class="main-wrapper" id="mainWrapper">
+        
+        <div class="sidebar" id="sidebarMenu">
+            <div class="sidebar-brand">Book List</div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">Home</a>
+                <a href="booklist.html" class="nav-item active-nav">Book List</a>
+                <a href="gallery.html" class="nav-item">Gallery</a>
+                <a href="feedback.html" class="nav-item">Feedback</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+                <a href="settings.html" class="nav-item">Settings</a>
+            </nav>
+        </div>
+
+        <section class="gallery-container-page">
+            <div class="gallery-card-wrapper">
+                   
+                <h2 class="section-title">Gallery</h2>
+
+                <div class="about-content">
+                    <p>Welcome to our Gallery! Here, you can explore a collection of photos that capture the facilities, services, and activities at PSB UiTM Kedah. These images provide a glimpse into the learning environment and experiences enjoyed by students and lecturers..</p>
+                </div>
+
+                <div class="gallery_container">
+                    
+                    <div class="content_box">
+                        <img src="pintu.jpg" alt="novel" class="box-image">
+                        <div class="content-layer">
+                            <span>
+                                <h3>VISIT LIBRARY</h3>
+                                <p>During my visit to PSB UiTM Kedah, I found that a variety of facilities are provided to meet the needs of both students and lecturers. These facilities help make the teaching and learning process more convenient, comfortable, and effective..</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="content_box">
+                        <img src="kaunter.jfif" alt="kaunter" class="box-image">
+                        <div class="content-layer">
+                            <span>
+                                
+                           <h3>COUNTER SERVICE</h3>
+                                <p>During my visit to PSB UiTM Kedah, I noticed that the service counter plays an important role in assisting students and lecturers with their inquiries and needs. The staff were friendly and helpful, making it easier for visitors to obtain information and access the services provided..</p>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="content_box">
+                        <img src="service.jfif" alt="service" class="box-image">
+                        <div class="content-layer">
+                            <span>
+                                
+                                 <h3>INFORMATION SERVICE</h3>
+                                <p>The Information Service at PSB UiTM Kedah serves as a helpful point of reference for students and lecturers. It provides clear and accessible information about the facilities, resources, and services available, ensuring a smoother and more convenient user experience..</p></span>
+                        </div>
+                    </div>
+
+                </div> </div> </section>
+    </div> <script>
+        const toggleButton = document.getElementById('sidebar-toggle');
+        const mainWrapper = document.getElementById('mainWrapper');
+
+        toggleButton.addEventListener('click', function() {
+            // Menambah/membuang kelas pada wrapper utama untuk sorok sidebar
+            mainWrapper.classList.toggle('sidebar-hidden');
+        });
+    </script>
+</body>
+</html>
