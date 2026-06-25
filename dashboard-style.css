@@ -1,0 +1,108 @@
+
+/* Container Utama yang memegang Gambar Bunga */
+.banner-section {
+    /* Ganti nama_gambar_bunga.jpg dengan nama fail gambar bunga anda yang sebenar */
+    background-image: url('lilac.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    min-height: 85vh; /* Memastikan gambar memenuhi ruang bawah navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- NAVIGATION MENU (NAVBAR) --- */
+header, nav {
+    background-color: purple; /* Warna latar belakang hitam/gelap */
+    padding: 20px 0;           /* Jarak atas dan bawah menu */
+    width: 100%;
+    text-align: center;        /* Memastikan semua menu duduk di tengah */
+}
+
+/* Gaya untuk pautan menu (Home, About IM, Book List, dll) */
+nav a, .nav-links a {
+    color: #ffffff;            /* Warna tulisan putih */
+    text-decoration: none;     /* Buang garis bawah pada pautan */
+    margin: 0 25px;            /* Jarak antara satu menu dengan menu sebelah */
+    font-size: 1.05rem;
+    font-weight: 600;          /* Tulisan sedikit tebal */
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Kesan apabila tetikus lalu (Hover) pada menu */
+nav a:hover, .nav-links a:hover {
+    color: #b3b3b3;            /* Warna bertukar kelabu lembut bila di-hover */
+}
+
+/* --- RESPONSIVE MENU UNTUK TELEFON --- */
+@media (max-width: 768px) {
+    nav a, .nav-links a {
+        margin: 10px;          /* Jarak lebih rapat jika skrin kecil */
+        display: inline-block;
+    }
+}
+/* Memastikan kandungan duduk di tengah skrin */
+.banner-container {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Tajuk Utama (Find your interesting book) */
+.banner-title {
+    font-size: 2.8rem;
+    color: #111111; /* Warna gelap supaya jelas nampak */
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+/* Menyusun dua kotak secara sebelah-menyebelah */
+.banner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px; /* Jarak antara dua kotak */
+}
+
+/* Kotak Putih Berbucu Bulat (Sama macam gambar rujukan kedua anda) */
+.card-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Putih dengan 90% kejelasan supaya teks senang baca */
+    padding: 35px;
+    border-radius: 20px; /* Bucu membulat (rounded) */
+    text-align: left; /* Teks di dalam kotak rata ke kiri */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15); /* Bayang lembut bawah kotak */
+}
+
+/* Tajuk di dalam kotak (PURPOSE / OBJECTIVE) */
+.card-box h2 {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Gaya Senarai Bullet di dalam kotak */
+.card-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.card-box ul li {
+    font-size: 1.05rem;
+    color: #222222;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Responsif untuk skrin telefon */
+@media (max-width: 768px) {
+    .banner-grid {
+        grid-template-columns: 1fr;
+    }
+    .banner-title {
+        font-size: 2rem;
+    }
+}
