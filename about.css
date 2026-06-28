@@ -1,0 +1,256 @@
+/* ==========================================================================
+   1. RESET & WARNA TEMA LILAC CERAH
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #faf9fe; /* Latar belakang putih pastel yang sangat lembut */
+    color: #332c42; /* Warna teks gelap ungu/charcoal, bukan hitam pekat */
+    min-height: 100vh;
+    padding: 30px 20px;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. NAVBAR STYLE (CLEAN & MINIMALIST)
+   ========================================================================== */
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 18px 35px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(160, 140, 200, 0.06);
+    border: 1px solid #f1edfa;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.nav-logo {
+    font-weight: 700;
+    color: #5c4d7d;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #8377a3;
+    margin-left: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #8b72e6; /* Warna ungu utama */
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   3. SUSUN ATUR UTAMA & HEADER
+   ========================================================================== */
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.badge {
+    background: #ede9fe; /* Kotak kecil bertema lilac cair */
+    color: #7c3aed;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #2e2545;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.definition {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #695e80;
+}
+
+.definition strong {
+    color: #7c3aed;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   4. KAD KEPENTINGAN & GOALS (GRID SEBELAH-MENEBELAH)
+   ========================================================================== */
+.content-grid {
+    display: flex;
+    gap: 30px;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.card {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(160, 140, 200, 0.04);
+    border: 1px solid #f1edfa;
+    transition: all 0.3s ease;
+}
+
+/* Kesan interaktif apabila tetikus berada di atas kad */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(142, 116, 230, 0.1);
+    border-color: #dcd3f8;
+}
+
+.card-header-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.icon {
+    font-size: 24px;
+    background: #f5f2ff;
+    padding: 10px;
+    border-radius: 14px;
+    display: inline-block;
+}
+
+.card h2 {
+    font-size: 22px;
+    color: #2e2545;
+    font-weight: 700;
+}
+
+/* --- GAYA LIST KEPENTINGAN --- */
+.importance-list {
+    list-style: none;
+}
+
+.importance-list li {
+    margin-bottom: 18px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.importance-list li::before {
+    content: "•";
+    color: #8b72e6;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.importance-list strong {
+    display: block;
+    font-size: 15px;
+    color: #44395e;
+    margin-bottom: 2px;
+}
+
+.importance-list p {
+    font-size: 13.5px;
+    color: #74698f;
+    line-height: 1.5;
+}
+
+/* --- GAYA KAD GOALS --- */
+.goals-text {
+    font-size: 15px;
+    color: #695e80;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.goals-visual-box {
+    background: #f5f2ff; /* Ruang dekorasi warna lilac lembut */
+    border-radius: 14px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #7c3aed;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   5. ANIMASI (ANIMATION KEYFRAMES)
+   ========================================================================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   6. RESPONSIVE UNTUK SKRIN TELEFON
+   ========================================================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .nav-links a {
+        margin: 0 10px;
+    }
+    .content-grid {
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 32px;
+    }
+}
