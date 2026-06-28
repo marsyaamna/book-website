@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <nav class="navbar">
+        <div class="navbar-brand">ABOUT US</div>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Home</a>
+            <a href="about.html" class="active">About IM</a>
+            <a href="booklist.html">Book List</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="contact.html">Contact</a>
+           
+</div>
+</nav>
+          <div class="main-content">
+        <div class="container">
+            <div class="book-list-container">
+                <h2>BOOK LIST</h2>
+                <div class="book-grid">
+                    <div class="book-card active" onclick="showDetail(event, 1)">
+                        <div class="book-cover cover-1"></div>
+                        <button class="detail-btn">Detail</button>
+                    </div>
+                    <div class="book-card" onclick="showDetail(event, 2)">
+                        <div class="book-cover cover-2"></div>
+                        <button class="detail-btn">Detail</button>
+                    </div>
+                    <div class="book-card" onclick="showDetail(event, 3)">
+                        <div class="book-cover cover-3"></div>
+                        <button class="detail-btn">Detail</button>
+                    </div>
+                    <div class="book-card" onclick="showDetail(event, 4)">
+                        <div class="book-cover cover-4"></div>
+                        <button class="detail-btn">Detail</button>
+                    </div>
+                    <div class="book-card" onclick="showDetail(event, 5)">
+                        <div class="book-cover cover-5"></div>
+                        <button class="detail-btn">Detail</button>
+                    </div>
+                    <div class="book-card" onclick="showDetail(event, 6)">
+                        <div class="book-cover cover-6"></div>
+                        <button class="detail-btn">Detail</button>
+                    </div>
+                    <div class="book-card" onclick="showDetail(event, 7)">
+                        <div class="book-cover cover-7"></div>
+                        <button class="detail-btn">Detail</button>
+                    </div>
+                    <div class="book-card" onclick="showDetail(event, 8)">
+                        <div class="book-cover cover-8"></div>
+                        <button class="detail-btn">Detail</button>
+                    </div>
+                    <div class="book-card" onclick="showDetail(event, 9)">
+                        <div class="book-cover cover-9"></div>
+                        <button class="detail-btn">Detail</button>
+                    </div>
+                    <div class="book-card" onclick="showDetail(event, 10)">
+                        <div class="book-cover cover-10"></div>
+                        <button class="detail-btn">Detail</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-table-container">
+                <table class="detail-table">
+                    <tr>
+                        <td class="field-label">Title:</td>
+                        <td id="detail-title">Management information systems</td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Year:</td>
+                        <td id="detail-year">1997</td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Publisher:</td>
+                        <td id="detail-publisher">London: Continuum</td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">ISBN:</td>
+                        <td id="detail-isbn">0826454070</td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Call Number:</td>
+                        <td id="detail-call">HD30.213. L83 1997</td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Subject:</td>
+                        <td id="detail-subject">Management information systems</td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Synopsis:</td>
+                        <td id="detail-synopsis">This book provides a thorough coverage of the principles, application and design of management information systems in both public and private sector organisations...</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const bookData = {
+            1: { title: "Management information systems", year: "1997", publisher: "London: Continuum", isbn: "0826454070", call: "HD30.213. L83 1997", subject: "Management information systems", synopsis: `This book provides a thorough coverage of the principles, application and design of management information systems in both public and private sector organisations. It is particularly relevant for students preparing themselves for:\n- professional examinations which include the study of information systems\n- students on BTEC, diploma and degree courses in Business Studies and Accountancy\n- students on Systems Analysis and Computer Science diploma and degree courses` },
+            2: { title: "Strategic information systems management", year: "2010", publisher: "Cengage Learning", isbn: "9781408007938", call: "T58.6. G73 2010", subject: "Management information systems", synopsis: "Presents an introduction to the interconnected world we live and work in. This title is suitable for various Information Systems modules with a strategic focus and for Strategic Management, Information Management and professional courses." },
+            3: { title: "Management Information Systems: MANAGING THE DIGITAL FIRM", year: "2006", publisher: "Pearson Prentice Hall", isbn: "0-13-197192-1", call: "658.4038 LAU 2006", subject: "Management Information Systems, Information Systems, Business Information Systems, Information Technology Management, Management", synopsis: "Management Information Systems by Kenneth C. Laudon and Jane P. Laudon provides a comprehensive introduction to how information systems support business operations, management decision-making, and organizational strategy..." },
+            4: { title: "Introduction to Information Systems: Supporting and Transforming Business (9th Edition, International Adaptation)", year: "2021 (9th Edition)", publisher: "Wiley", isbn: "978-1-119-85993-2", call: "658.4038 RAI 2021", subject: "Information Systems, Management Information Systems, Business Information Systems, Information Technology, Digital Business, Information Technology Management", synopsis: "Introduction to Information Systems: Supporting and Transforming Business introduces the fundamental concepts of information systems and their role in supporting modern organizations..." },
+            5: { title: "Management Information Systems (7th Edition)", year: "2015", publisher: "Cengage Learning.", isbn: "978-1-285-18613-9", call: "HD 30.213 .S68 2015", subject: "Management Information Systems (MIS), information technology, business management, and organizational decision-making.", synopsis: "Management Information Systems explains how information systems and technology support business operations, management, and decision-making processes..." },
+            6: { title: "Management Information Systems: Managing the Digital Firm (Seventh Edition)", year: "2002", publisher: "Prentice Hall", isbn: "0-13-033597-9", call: "HD30.213 .L38 2002", subject: "Management Information Systems, information technology, digital business, and organizational management.", synopsis: "Management Information Systems: Managing the Digital Firm discusses the role of information systems in modern organizations and digital businesses..." },
+            7: { title: "Management Information Systems: New Approaches to Organization and Technology", year: "1998", publisher: "Prentice Hall", isbn: "0-13-857723-4", call: "T58.6.L38 1998", subject: "Information management, Information system, New approaches to Organizations and Technologies", synopsis: "Management Information Systems: New Approaches to Organization & Technology (5th Edition) by Kenneth C. Laudon and Jane P. Laudon explains how the information systems and technology can help the organizations to improve..." },
+            8: { title: "Strategic Information Management: Challenges and strategies in Managing Information Systems", year: "2003", publisher: "Butterworth-Heinemann", isbn: "0 7506 5619 0", call: "T58.64.G34 2003", subject: "Strategic Information Management, Challenges and strategies to manage information system.", synopsis: "Strategic Information Management: Challenges and Strategies in Managing Information Systems had explores the critical role of information systems in a modern organizations and the challenges of managing Information effectively..." },
+            9: { title: "Project Management, Planning and Control: Managing Engineering, Construction and Manufacturing Projects to PMI, APM and BSI Standards (7th Edition)", year: "2017", publisher: "Butterworth-Heinemann (An imprint of Elsevier)", isbn: "978-0-08-102020-3", call: "OSs T 58.8 .L642 2017", subject: "Project Management, Engineering, Construction, Manufacturing, and PMI/APM/BSI Standards.", synopsis: "An established and comprehensive handbook focusing on the principles and techniques needed to successfully manage engineering, construction, and manufacturing projects from start to finish..." },
+            10: { title: "Information Technology for Management (8th Edition - International Student Version)", year: "2012", publisher: "John Wiley & Sons (Asia) Pte Ltd", isbn: "978-1-18-09225-5", call: "T 58.6 .T87 2012", subject: "Information Technology, Management Information Systems (MIS), Business Management.", synopsis: "Designed to give students an edge when facing the challenges and opportunities of modern business careers, this book covers how IT and corporate strategy support organizational performance, innovation, and agility..." }
+        };
+
+        function showDetail(evt, bookId) {
+            const book = bookData[bookId];
+            if (!book) return;
+
+            document.getElementById('detail-title').innerText = book.title;
+            document.getElementById('detail-year').innerText = book.year;
+            document.getElementById('detail-publisher').innerText = book.publisher;
+            document.getElementById('detail-isbn').innerText = book.isbn;
+            document.getElementById('detail-call').innerText = book.call;
+            document.getElementById('detail-subject').innerText = book.subject;
+            document.getElementById('detail-synopsis').innerText = book.synopsis;
+
+            const cards = document.querySelectorAll('.book-card');
+            cards.forEach(card => card.classList.remove('active'));
+            evt.currentTarget.classList.add('active');
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebarMenu');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

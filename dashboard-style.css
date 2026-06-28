@@ -1,0 +1,104 @@
+
+.banner-section {
+    
+    background-image: url('lilac.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    min-height: 85vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header, nav {
+    background-color: purple;
+    padding: 20px 0;           
+    width: 100%;
+    text-align: center;        
+}
+
+nav a, .nav-links a {
+    color: #ffffff;            
+    text-decoration: none;     
+    margin: 0 25px;            
+    font-size: 1.05rem;
+    font-weight: 600;          
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+
+nav a:hover, .nav-links a:hover {
+    color: #b3b3b3;            
+}
+@media (max-width: 768px) {
+    nav a, .nav-links a {
+        margin: 10px;          
+        display: inline-block;
+    }
+}
+
+.banner-container {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.banner-title {
+    font-size: 2.8rem;
+    color: #111111; 
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+
+.banner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+
+.card-box {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 35px;
+    border-radius: 20px; 
+    text-align: left; 
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15); 
+}
+
+
+.card-box h2 {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+
+.card-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.card-box ul li {
+    font-size: 1.05rem;
+    color: #222222;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .banner-grid {
+        grid-template-columns: 1fr;
+    }
+    .banner-title {
+        font-size: 2rem;
+    }
+}
